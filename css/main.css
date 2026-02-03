@@ -1,0 +1,334 @@
+/**
+ * Web Tasarım Fiyatları - Ana stiller
+ * Geliştiren: KARAKAR Web
+ */
+:root {
+  --bg: #f5f5f5;
+  --text: #000000;
+  --surface: #ffffff;
+  --border: rgba(0, 0, 0, 0.12);
+  --border-strong: rgba(0, 0, 0, 0.2);
+  --text-muted: rgba(0, 0, 0, 0.7);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.2s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+a:hover {
+  opacity: 0.8;
+}
+
+/* Header */
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.site-logo-wrap {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.site-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+.site-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0 0 0;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+.nav-links a:hover {
+  background: var(--bg);
+  opacity: 1;
+}
+.nav-links .btn-ayarlar {
+  background: var(--text);
+  color: var(--surface);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+}
+.nav-links .btn-ayarlar:hover {
+  background: #1a1a1a;
+  opacity: 1;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+  margin-top: auto;
+}
+.site-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.site-footer-brand {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.site-footer-dev {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+.site-footer-dev a {
+  color: var(--text);
+  font-weight: 500;
+}
+.site-footer-contact {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.site-footer-contact a {
+  color: var(--text);
+}
+
+/* Sabit alt iletişim çubuğu */
+.bottom-contact-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background: var(--surface);
+  border-top: 1px solid var(--border-strong);
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+  max-width: 100%;
+}
+.bottom-contact-link {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  padding: 0.6rem 0.5rem;
+  min-height: 52px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  transition: background var(--transition);
+  border: none;
+  max-width: 180px;
+}
+.bottom-contact-link:hover {
+  background: var(--bg);
+  opacity: 1;
+}
+.bottom-contact-link:active {
+  background: rgba(0, 0, 0, 0.06);
+}
+.bottom-contact-icon {
+  display: none;
+}
+.bottom-contact-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+  min-height: 44px;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-hover);
+}
+.btn:active {
+  transform: translateY(0);
+}
+.btn-primary {
+  background: var(--text);
+  color: var(--surface);
+}
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+}
+
+/* Form elements */
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  min-height: 44px;
+  transition: border-color var(--transition);
+}
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--text);
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--text);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border);
+}
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main {
+    padding: 1rem;
+  }
+  .site-footer-contact {
+    flex-direction: column;
+  }
+  .card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-type-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
