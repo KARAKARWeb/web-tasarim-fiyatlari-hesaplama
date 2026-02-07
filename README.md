@@ -4,6 +4,8 @@
 
 ![Web Tasarım Fiyatları](https://karakar.web.tr/wp-content/uploads/2026/01/logo.webp)
 
+<meta name="google-site-verification" content="Bv-C21pj43DbEpRqGWt23R45BkQBaRFIv7dwl85y584" />
+
 ---
 
 ## Özellikler
